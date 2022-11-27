@@ -1,4 +1,5 @@
-import type { MetaFunction } from "@remix-run/node";
+import fontAwesomeStyles from "@fortawesome/fontawesome-svg-core/styles.css";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -10,16 +11,26 @@ import {
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Jonas Dahl",
   viewport: "width=device-width,initial-scale=1",
 });
 
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: fontAwesomeStyles }];
+};
+
 export default function App() {
   return (
-    <html lang="en">
+    <html>
       <head>
         <Meta />
         <Links />
+        <script src="https://use.fontawesome.com/196102e831.js" />
+        <script
+          defer
+          data-domain="jdahl.se"
+          src="https://plausible.addem.se/js/plausible.js"
+        ></script>
       </head>
       <body>
         <Outlet />

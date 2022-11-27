@@ -1,8 +1,29 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faAsterisk,
+  faChevronDown,
+  faEnvelope,
+  faGlobe,
+  faGraduationCap,
+  faHome,
+  faLightbulb,
+  faPhone,
+  faStar,
+  faTrophy,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { LinksFunction } from "@remix-run/node";
 import styles from "~/app.css";
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }];
+  return [
+    { rel: "stylesheet", href: styles },
+    {
+      rel: "alternate",
+      hrefLang: "sv-SE",
+      href: "https://jdahl.se",
+    },
+  ];
 };
 
 export default function Index() {
@@ -21,26 +42,35 @@ export default function Index() {
           </p>
           <ul>
             <li>
-              <i className="fa fa-phone"></i> 070-796 48 83
+              <FontAwesomeIcon icon={faPhone} /> 070-796 48 83
             </li>
             <li>
-              <i className="fa fa-envelope"></i> <span>jonas</span>@
+              <FontAwesomeIcon icon={faEnvelope} /> <span>jonas</span>@
               <span>jdahl.se</span>
             </li>
             <li>
-              <i className="fa fa-github"></i>
+              <FontAwesomeIcon icon={faGithub} />
               <a href="https://github.com/jonasdahl">jonasdahl</a>
             </li>
             <li>
-              <i className="fa fa-globe"></i>{" "}
+              <FontAwesomeIcon icon={faGlobe} />{" "}
               <a href="http://jdahl.se">jdahl.se</a>
             </li>
           </ul>
         </div>
       </div>
       <div className="down">
-        <a href="#cv" id="cv-link">
-          <i className="fa fa-chevron-down"></i>
+        <a
+          href="#cv"
+          id="cv-link"
+          onClick={(e) => {
+            e.preventDefault();
+            document
+              .getElementById("cv")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <FontAwesomeIcon icon={faChevronDown} />
         </a>
       </div>
       <div id="cv"></div>
@@ -50,24 +80,24 @@ export default function Index() {
         </h1>
         <ul className="info print-only">
           <li>
-            <i className="fa fa-phone"></i> 070-796 48 83
-            <i className="fa fa-envelope"></i> <span>jonas</span>@
+            <FontAwesomeIcon icon={faPhone} /> 070-796 48 83
+            <FontAwesomeIcon icon={faEnvelope} /> <span>jonas</span>@
             <span>jdahl.se</span>
           </li>
           <li></li>
           <li>
-            <i className="fa fa-home"></i> Solna
+            <FontAwesomeIcon icon={faHome} /> Solna
           </li>
           <li>
-            <i className="fa fa-globe"></i>{" "}
+            <FontAwesomeIcon icon={faGlobe} />{" "}
             <a href="http://jdahl.se">jdahl.se</a>
-            <i className="fa fa-github"></i>
+            <FontAwesomeIcon icon={faGithub} />
             <a href="https://github.com/jonasdahl">jonasdahl</a>
           </li>
         </ul>
 
         <h2>
-          <i className="fa fa-star"></i> Erfarenhet
+          <FontAwesomeIcon icon={faStar} /> Erfarenhet
         </h2>
         <ul>
           <li>
@@ -99,7 +129,7 @@ export default function Index() {
         </ul>
 
         <h2>
-          <i className="fa fa-graduation-cap"></i> Utbildning
+          <FontAwesomeIcon icon={faGraduationCap} /> Utbildning
         </h2>
         <ul>
           <li>
@@ -127,7 +157,7 @@ export default function Index() {
         </ul>
 
         <h2>
-          <i className="fa fa-trophy"></i> Övriga meriter
+          <FontAwesomeIcon icon={faTrophy} /> Övriga meriter
         </h2>
         <ul>
           <li>
@@ -178,7 +208,7 @@ export default function Index() {
         </ul>
 
         <h2>
-          <i className="fa fa-asterisk"></i> Övriga projekt
+          <FontAwesomeIcon icon={faAsterisk} /> Övriga projekt
         </h2>
         <p>
           <a href="https://tidla.se">Tidla bokningssystem</a>,
@@ -190,7 +220,7 @@ export default function Index() {
         </p>
 
         <h2>
-          <i className="fa fa-lightbulb-o"></i> Kompetenser
+          <FontAwesomeIcon icon={faLightbulb} /> Kompetenser
         </h2>
         <p>
           HTML, CSS, Javascript, React, Node.js, Vue.js, PHP, Laravel, Swift,
@@ -200,7 +230,7 @@ export default function Index() {
         <p>Har svenskt körkort.</p>
 
         <h2>
-          <i className="fa fa-globe"></i> Språk
+          <FontAwesomeIcon icon={faGlobe} /> Språk
         </h2>
         <p>
           Talar engelska och svenska flytande. Förstår spanska på en
