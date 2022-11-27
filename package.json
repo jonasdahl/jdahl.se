@@ -7,8 +7,7 @@
     "start": "remix-serve build",
     "typecheck": "tsc",
     "test": "vitest",
-    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
-    "prisma": "prisma"
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint ."
   },
   "eslintIgnore": [
     "/node_modules",
@@ -47,6 +46,7 @@
     "@vitejs/plugin-react": "^2.2.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
+    "happy-dom": "^7.7.0",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4",
     "vite": "^3.2.4",
