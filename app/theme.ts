@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import clouds from "./clouds.jpg";
+import clouds from "./clouds.avif";
 
 export const theme = extendTheme({
   styles: {
