@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { ComponentProps, ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 import { MotionBox } from "../motion-box";
 
 export function BouncingContainer({

@@ -1,7 +1,8 @@
 import { Center, Container } from "@chakra-ui/react";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { json, LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "remix-i18next";
@@ -48,7 +49,7 @@ export default function Index() {
   return (
     <>
       <LanguageButton
-        to={!!locale?.startsWith("en") ? "/" : "/?lng=en"}
+        to={locale?.startsWith("en") ? "/" : "/?lng=en"}
         label={t("change-language", { ns: "translation" })}
       />
 

@@ -14,7 +14,4 @@ module.exports = {
       version: 28,
     },
   },
-  rules: {
-    "prefer-templates": ["warn"],
-  },
 };

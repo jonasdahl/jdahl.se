@@ -1,6 +1,7 @@
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import fontAwesomeStyles from "@fortawesome/fontawesome-svg-core/styles.css";
-import { json, LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,

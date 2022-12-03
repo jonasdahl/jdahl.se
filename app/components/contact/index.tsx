@@ -10,14 +10,15 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import { faGithub, IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
   faGlobe,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export function Contact({
   description,

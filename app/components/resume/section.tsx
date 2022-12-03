@@ -1,6 +1,6 @@
 import { Box, Heading, Stack, Wrap, WrapItem } from "@chakra-ui/react";
-import { DateTime } from "luxon";
-import { ReactNode } from "react";
+import type { DateTime } from "luxon";
+import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "remix-i18next";
 
