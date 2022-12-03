@@ -1,9 +1,11 @@
 import { Box, Heading, Spacer, Stack, Wrap, WrapItem } from "@chakra-ui/react";
 import { DateTime } from "luxon";
 import { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
+import { useLocale } from "remix-i18next";
 
 export function Section({ children }: { children: ReactNode }) {
-  return <Stack spacing={8}>{children}</Stack>;
+  return <Stack spacing={6}>{children}</Stack>;
 }
 
 export function SectionContent({ children }: { children: ReactNode }) {
@@ -32,6 +34,8 @@ export function SectionItem({
   end: DateTime | null;
 }) {
   const dateFormat = "LLLL yyyy";
+  const locale = useLocale();
+  const { t } = useTranslation("resume");
 
   return (
     <Box>
@@ -50,8 +54,8 @@ export function SectionItem({
         </WrapItem>
         <Spacer />
         <WrapItem fontWeight="bold" fontSize="sm">
-          {start.toFormat(dateFormat, { locale: "sv-SE" })} -{" "}
-          {end ? end.toFormat(dateFormat, { locale: "sv-SE" }) : "nu"}
+          {start.toFormat(dateFormat, { locale })} -{" "}
+          {end ? end.toFormat(dateFormat, { locale }) : t("now")}
         </WrapItem>
       </Wrap>
       {description ? <Box>{description}</Box> : null}

@@ -21,6 +21,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { DateTime } from "luxon";
+import { Trans, useTranslation } from "react-i18next";
 import {
   Section,
   SectionContent,
@@ -29,22 +30,24 @@ import {
 } from "./section";
 
 export function Resume() {
+  const { t } = useTranslation(["resume"]);
+
   return (
     <Card bg="white" p={8}>
       <CardHeader>
         <Heading id="cv">Jonas Dahl</Heading>
       </CardHeader>
       <CardBody>
-        <Stack spacing={6}>
+        <Stack spacing={10}>
           <Section>
             <SectionHeading>
-              <FontAwesomeIcon icon={faStar} /> Erfarenhet
+              <FontAwesomeIcon icon={faStar} /> {t("workExperience")}
             </SectionHeading>
             <SectionContent>
               <SectionItem
-                description="Tävlingsplattform för gaming och e-sport. Huvudfokus frontend."
+                description={t("experience.challengermode.description")}
                 location="Challengermode AB"
-                title="Mjukvaruingenjör"
+                title={t("softwareEngineer")}
                 start={DateTime.fromObject({
                   year: 2022,
                   month: 9,
@@ -53,9 +56,9 @@ export function Resume() {
                 end={null}
               />
               <SectionItem
-                description="Verktyg och produkter inom IoT. Fullstack med tyngdpunkt på webbfrontend med React. Node.js och Java på backend."
+                description={t("experience.altacogni.description")}
                 location="Altacogni AB"
-                title="Mjukvaruingenjör"
+                title={t("softwareEngineer")}
                 start={DateTime.fromObject({
                   year: 2020,
                   month: 8,
@@ -64,9 +67,9 @@ export function Resume() {
                 end={DateTime.fromObject({ year: 2020, month: 6, day: 10 })}
               />
               <SectionItem
-                description="Verktyg och produkter inom IoT. Fullstack med tyngdpunkt på webbfrontend med React. Node.js och Java på backend."
+                description={t("experience.yanzi.description")}
                 location="Yanzi Networks AB"
-                title="Mjukvaruingenjör"
+                title={t("softwareEngineer")}
                 start={DateTime.fromObject({
                   year: 2018,
                   month: 8,
@@ -79,13 +82,13 @@ export function Resume() {
 
           <Section>
             <SectionHeading>
-              <FontAwesomeIcon icon={faGraduationCap} /> Utbildning
+              <FontAwesomeIcon icon={faGraduationCap} /> {t("education.title")}
             </SectionHeading>
             <SectionContent>
               <SectionItem
-                title="Civilingenjörsutbildning i Datateknik (300 hp)"
-                description="Master i Datalogi med spåret Programvaruteknik och delspåret Programspråk. Kandidatexamensarbete samt kurslista lämnas gärna på begäran. Examen juni 2018."
-                location="Kungliga tekniska högskolan"
+                title={t("education.kth.title")}
+                description={t("education.kth.description")}
+                location={t("kth") ?? "KTH"}
                 start={DateTime.fromObject({
                   year: 2013,
                   month: 8,
@@ -94,8 +97,8 @@ export function Resume() {
                 end={DateTime.fromObject({ year: 2018, month: 6, day: 10 })}
               />
               <SectionItem
-                title="Naturvetenskapsprogrammet"
-                description="Gymnasieutbildning med inriktning Naturvetenskap."
+                title={t("education.highscool.title")}
+                description={t("education.highscool.description")}
                 location="Hersby gymnasium"
                 start={DateTime.fromObject({
                   year: 2010,
@@ -113,9 +116,9 @@ export function Resume() {
             </SectionHeading>
             <SectionContent>
               <SectionItem
-                title="Ansvarig för Datasektionens Mottagning 2017"
-                location="Konglig Datasektionen på KTH"
-                description="Ideellt förtroendevald. Ytterst ansvarig för Datasektionens Mottagning av nya studenter vid Kungliga tekniska högskolan med en personal på 60 personer. Organiserade aktiviteter för de 200 nyantagna. Ekonomiskt ansvarig med en omsättning om drygt 1 mnkr."
+                title={t("activities.reception.title")}
+                location={t("konglig-datasektionen") ?? "Konglig Datasektionen"}
+                description={t("activities.reception.description")}
                 start={DateTime.fromObject({
                   year: 2017,
                   month: 1,
@@ -128,19 +131,19 @@ export function Resume() {
                 })}
               />
               <SectionItem
-                title="Informationsorganet"
-                location="Konglig Datasektionen på KTH"
+                title={t("activities.ior.title")}
+                location={t("konglig-datasektionen") ?? "Konglig Datasektionen"}
                 description={
-                  <>
-                    Utvecklat diverse system för Datasektionen. Se{" "}
+                  <Trans ns="resume" i18nKey="activities.ior.description">
+                    {`Utvecklat diverse system för Datasektionen. Se`}
                     <ChakraLink
                       textDecoration="underline"
                       href="https://github.com/jonasdahl"
                     >
-                      Github
-                    </ChakraLink>{" "}
-                    för detaljerade projekt.
-                  </>
+                      {`{{1}}`}
+                    </ChakraLink>
+                    {`för detaljerade projekt.`}
+                  </Trans>
                 }
                 start={DateTime.fromObject({
                   year: 2015,
@@ -150,9 +153,9 @@ export function Resume() {
                 end={DateTime.fromObject({ year: 2019, month: 1, day: 30 })}
               />
               <SectionItem
-                title="Laborationsassistent"
-                location="Kungliga Tekniska Högskolan"
-                description="Undervisade och examinerade datorlaborationer i kursen Programmeringsparadigm."
+                title={t("activities.ta.title")}
+                location={t("kth") ?? "KTH"}
+                description={t("activities.ta.description")}
                 start={DateTime.fromObject({
                   year: 2015,
                   month: 8,
@@ -161,7 +164,7 @@ export function Resume() {
                 end={DateTime.fromObject({ year: 2016, month: 6, day: 30 })}
               />
               <SectionItem
-                title="Fotbollsdomare"
+                title={t("activities.referee.title")}
                 start={DateTime.fromObject({
                   year: 2007,
                   month: 4,
@@ -178,13 +181,13 @@ export function Resume() {
                 })}
                 end={null}
                 description={
-                  <>
-                    Tillhandahåller{" "}
+                  <Trans ns="resume" i18nKey="activities.periserve.description">
+                    {"Tillhandahåller "}
                     <ChakraLink href="https://tidla.se">
-                      Tidla bokningssystem för växande företag
+                      {"Tidla bokningssystem för växande företag"}
                     </ChakraLink>
-                    .
-                  </>
+                    {"."}
+                  </Trans>
                 }
               />
             </SectionContent>
@@ -192,13 +195,13 @@ export function Resume() {
 
           <Section>
             <SectionHeading>
-              <FontAwesomeIcon icon={faAsterisk} /> Övriga projekt
+              <FontAwesomeIcon icon={faAsterisk} /> {t("other")}
             </SectionHeading>
             <SectionContent>
               <Wrap spacing={2}>
                 <ProjectItem
                   href="https://tidla.se"
-                  label="Tidla bokningssystem"
+                  label={t("tidla-bokningssystem")}
                 />
                 <ProjectItem
                   href="https://packlistor.se"
@@ -211,7 +214,7 @@ export function Resume() {
                 />
                 <ProjectItem
                   href="https://fogis.addem.se/"
-                  label="Fogis Kalenderexport för domare"
+                  label={t("fogisCalendarExport")}
                 />
               </Wrap>
             </SectionContent>
@@ -219,7 +222,7 @@ export function Resume() {
 
           <Section>
             <SectionHeading>
-              <FontAwesomeIcon icon={faLightbulb} /> Kompetenser
+              <FontAwesomeIcon icon={faLightbulb} /> {t("skills")}
             </SectionHeading>
 
             <SectionContent>
@@ -232,17 +235,14 @@ export function Resume() {
               </Wrap>
             </SectionContent>
           </Section>
-          <Text>Har svenskt körkort.</Text>
+          <Text>{t("driving-license")}</Text>
 
           <Section>
             <SectionHeading>
-              <FontAwesomeIcon icon={faGlobe} /> Språk
+              <FontAwesomeIcon icon={faGlobe} /> {t("languages")}
             </SectionHeading>
             <SectionContent>
-              <Text>
-                Talar engelska och svenska flytande. Förstår spanska på en
-                grundläggande nivå.
-              </Text>
+              <Text>{t("languages-content")}</Text>
             </SectionContent>
           </Section>
         </Stack>
@@ -252,10 +252,16 @@ export function Resume() {
 }
 
 const tags = [
+  "Remix",
+  "React",
+  "Typescript",
+  "Javascript",
   "HTML",
   "CSS",
-  "Javascript",
-  "React",
+  "Web",
+  "Deno",
+  "Bun",
+  "Dotnet",
   "Node.js",
   "Vue.js",
   "PHP",
@@ -267,7 +273,6 @@ const tags = [
   "MySQL",
   "PostgreSQL",
   "Git",
-  "fotografering",
   "Photoshop",
 ];
 

@@ -1,0 +1,56 @@
+{
+  "workExperience": "Erfarenhet",
+  "softwareEngineer": "Mjukvaruingenjör",
+  "kth": "Kungliga tekniska högskolan",
+  "experience": {
+    "challengermode": {
+      "description": "Tävlingsplattform för gaming och e-sport. Huvudfokus frontend."
+    },
+    "altacogni": {
+      "description": "Verktyg och produkter inom IoT. Fullstack med tyngdpunkt på webbfrontend med React. Node.js och Java på backend."
+    },
+    "yanzi": {
+      "description": "Verktyg och produkter inom IoT. Fullstack med tyngdpunkt på webbfrontend med React. Node.js och Java på backend."
+    }
+  },
+  "education": {
+    "title": "Utbildning",
+    "kth": {
+      "title": "Civilingenjörsutbildning i Datateknik (300 hp)",
+      "description": "Master i Datalogi med spåret Programvaruteknik och delspåret Programspråk. Kandidatexamensarbete samt kurslista lämnas gärna på begäran. Examen juni 2018."
+    },
+    "highscool": {
+      "title": "Naturvetenskapsprogrammet",
+      "description": "Gymnasieutbildning med inriktning Naturvetenskap."
+    }
+  },
+  "activities": {
+    "reception": {
+      "title": "Ansvarig för Datasektionens Mottagning 2017",
+      "description": "Ideellt förtroendevald. Ytterst ansvarig för Datasektionens Mottagning av nya studenter vid Kungliga tekniska högskolan med en personal på 60 personer. Organiserade aktiviteter för de 200 nyantagna. Ekonomiskt ansvarig med en omsättning om drygt 1 mnkr."
+    },
+    "ior": {
+      "title": "Informationsorganet",
+      "description": "Utvecklat diverse system för Datasektionen. Se <1>Github</1> för detaljerade projekt."
+    },
+    "ta": {
+      "title": "Laborationsassistent",
+      "description": "Undervisade och examinerade datorlaborationer i kursen Programmeringsparadigm."
+    },
+    "referee": {
+      "title": "Fotbollsdomare"
+    },
+    "periserve": {
+      "description": "Tillhandahåller <1>Tidla Bokningssystem för växande företag</1>."
+    }
+  },
+  "konglig-datasektionen": "Konglig Datasektionen på KTH",
+  "other": "Övriga projekt",
+  "fogisCalendarExport": "Fogis Kalenderexport för domare",
+  "tidla-bokningssystem": "Tidla bokningssystem",
+  "skills": "Kompetenser",
+  "driving-license": "Har svenskt körkort.",
+  "languages": "Språk",
+  "languages-content": "Talar engelska och svenska flytande. Förstår spanska på en grundläggande nivå.",
+  "resume": ""
+}

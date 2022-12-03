@@ -30,11 +30,17 @@
     "@remix-run/serve": "^1.7.6",
     "@types/luxon": "^3.1.0",
     "framer-motion": "^7.6.12",
+    "i18next": "^22.0.6",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-fs-backend": "^2.0.1",
+    "i18next-http-backend": "^2.0.2",
     "isbot": "^3.6.5",
     "luxon": "^3.1.1",
     "prisma": "^4.6.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.0.0",
+    "remix-i18next": "^4.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.7.6",
@@ -44,6 +50,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/eslint": "^8.4.10",
+    "@types/i18next-fs-backend": "^1.1.2",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",

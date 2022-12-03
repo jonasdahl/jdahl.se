@@ -3,6 +3,8 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { LinksFunction } from "@remix-run/node";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { useLocale } from "remix-i18next";
 import { BouncingContainer } from "~/components/bouncing-container";
 import { Contact } from "~/components/contact";
 import { LanguageButton } from "~/components/language-button";
@@ -14,11 +16,24 @@ export const links: LinksFunction = () => {
   return [{ rel: "alternate", hrefLang: "sv-SE", href: "https://jdahl.se" }];
 };
 
+// This tells remix to load the "home" namespace
+export let handle = {
+  i18n: "resume",
+};
+
 export default function Index() {
+  const { t } = useTranslation(["translation", "resume"]);
+
+  const locale = useLocale();
   const cvRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
-      <LanguageButton to="/en" label="In English" flag={englishFlag} />
+      <LanguageButton
+        to={!!locale?.startsWith("en") ? "/?lng=sv" : "?lng=en"}
+        label={t("change-language", { ns: "translation" })}
+        flag={englishFlag}
+      />
 
       <Center h="100vh" color="white">
         <Contact

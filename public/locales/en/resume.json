@@ -1,0 +1,56 @@
+{
+  "resume": "Resume",
+  "workExperience": "Work experience",
+  "softwareEngineer": "Software Engineer",
+  "kth": "Royal Institute of Technology",
+  "experience": {
+    "challengermode": {
+      "description": "Platform for e-sports and gaming competitions. Main focus frontend."
+    },
+    "altacogni": {
+      "description": "Tools and products within the IoT area. Fullstack with focus on web frontend with React. Node.js and Java on the backend."
+    },
+    "yanzi": {
+      "description": "Tools and products within the IoT area. Fullstack with focus on web frontend with React. Node.js and Java on the backend."
+    }
+  },
+  "education": {
+    "title": "Education",
+    "kth": {
+      "title": "Degree programme in Computer Science(300 ETCS)",
+      "description": "Master in Computer Science. Specialization Software Technology with the subtrack Programming Languages. Course list and First Cycle Degree Project is available on request. Graduation June 2018."
+    },
+    "highscool": {
+      "title": "Natural science programme",
+      "description": "Upper secondary school focused on math and natural science. Course list is available on request."
+    }
+  },
+  "activities": {
+    "reception": {
+      "title": "Head of the Reception",
+      "description": "Volountary and elected. As head of the Reception of new students at Datasektionen at KTH, I was liable of a staff of 60 persons. We organized activities for the 200 newly admitted students. Financially responsible with a turnover of 1 million SEK."
+    },
+    "ior": {
+      "title": "Informationsorganet",
+      "description": "Developed different web systems for Datasektionen. See <1>Github</1> for detailed projects."
+    },
+    "periserve": {
+      "description": "Providing <1>Tidla Booking Systems for smaller businesses</1>."
+    },
+    "referee": {
+      "title": "Soccer referee"
+    },
+    "ta": {
+      "description": "Taught and examined computer labs in the course Programming Paradigms.",
+      "title": "Teaching assistant"
+    }
+  },
+  "konglig-datasektionen": "Konglig Datasektionen",
+  "driving-license": "Swedish Driving License.",
+  "fogisCalendarExport": "Fogis Calendar Export for Swedish referees",
+  "languages": "Languages",
+  "languages-content": "I speak English and Swedish fluently. Understand Spanish on a basic level.",
+  "other": "Other projects",
+  "skills": "Skills",
+  "tidla-bokningssystem": "Tidla Booking Systems"
+}

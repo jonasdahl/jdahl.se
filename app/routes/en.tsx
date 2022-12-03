@@ -5,7 +5,6 @@ import {
   faEnvelope,
   faGraduationCap,
   faLightbulb,
-  faStar,
   faTrophy,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -60,39 +59,6 @@ export default function Index() {
       <div className="cv">
         <h1>Jonas Dahl</h1>
         <span className="sub-cv">CV</span>
-
-        <h2>
-          <FontAwesomeIcon icon={faStar} /> Work experience
-        </h2>
-        <ul>
-          <li>
-            <span className="time">September 2020 - present</span>
-            <h3>Software engineer</h3>
-            <span className="location">Challengermode AB</span>
-            <span className="description">
-              Platform for e-sports and gaming competitions. Main focus
-              frontend.
-            </span>
-          </li>
-          <li>
-            <span className="time">August 2020 - June 2022</span>
-            <h3>Software engineer</h3>
-            <span className="location">Altacogni AB</span>
-            <span className="description">
-              Tools and products within the IoT area. Fullstack with focus on
-              web frontend with React. Node.js and Java on the backend.
-            </span>
-          </li>
-          <li>
-            <span className="time">August 2018 - July 2020</span>
-            <h3>Software engineer</h3>
-            <span className="location">Yanzi Networks AB</span>
-            <span className="description">
-              Tools and products within the IoT area. Fullstack with focus on
-              web frontend with React. Node.js and Java on the backend.
-            </span>
-          </li>
-        </ul>
 
         <h2>
           <FontAwesomeIcon icon={faGraduationCap} /> Education
