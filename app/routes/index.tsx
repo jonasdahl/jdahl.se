@@ -1,4 +1,4 @@
-import { Center, Container } from "@chakra-ui/react";
+import { Box, Center, Container } from "@chakra-ui/react";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
@@ -64,22 +64,31 @@ export default function Index() {
         />
       </Center>
 
-      <BouncingContainer marginTop="-100px" height="100px">
-        <Center>
-          <Link
-            color="white"
-            fontSize="3xl"
-            to="#cv"
-            onClick={(e: { preventDefault: () => void }) => {
-              e.preventDefault();
-              cvRef.current?.scrollIntoView({ behavior: "smooth" });
-            }}
-            title={t("show-resume")}
-          >
-            <FontAwesomeIcon icon={faChevronDown} />
-          </Link>
-        </Center>
-      </BouncingContainer>
+      <Box position="relative" height={0}>
+        <BouncingContainer
+          marginTop="-100px"
+          height="100px"
+          position="absolute"
+          top={0}
+          left={0}
+          right={0}
+        >
+          <Center>
+            <Link
+              color="white"
+              fontSize="3xl"
+              to="#cv"
+              onClick={(e: { preventDefault: () => void }) => {
+                e.preventDefault();
+                cvRef.current?.scrollIntoView({ behavior: "smooth" });
+              }}
+              title={t("show-resume")}
+            >
+              <FontAwesomeIcon icon={faChevronDown} />
+            </Link>
+          </Center>
+        </BouncingContainer>
+      </Box>
 
       <Container maxW="container.md" ref={cvRef} pb={24}>
         <Resume />
