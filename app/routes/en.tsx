@@ -10,20 +10,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { LinksFunction } from "@remix-run/node";
-import styles from "~/app.css";
 import { Contact } from "~/components/contact";
 import { LanguageButton } from "~/components/language-button";
 import swedishFlag from "~/swedish.png";
 
 export const links: LinksFunction = () => {
-  return [
-    { rel: "stylesheet", href: styles },
-    {
-      rel: "alternate",
-      hrefLang: "en-US",
-      href: "https://jdahl.se/en",
-    },
-  ];
+  return [{ rel: "alternate", hrefLang: "en-US", href: "https://jdahl.se/en" }];
 };
 
 export default function Index() {
