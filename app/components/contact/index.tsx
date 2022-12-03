@@ -1,4 +1,5 @@
 import {
+  Box,
   Container,
   Heading,
   Link,
@@ -37,9 +38,10 @@ export function Contact({
 }) {
   return (
     <Container maxW="22rem">
-      <VStack spacing={6} textAlign="center">
+      <VStack spacing={4} textAlign="center">
         <Heading>{name}</Heading>
         <Text w="100%">{description}</Text>
+        <Box />
         <Wrap justify="center" align="center">
           <Item icon={faPhone} value={phone} />
           <Item icon={faEnvelope} value={email} />
