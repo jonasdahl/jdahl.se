@@ -1,19 +1,19 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Center } from "@chakra-ui/react";
 import {
   faAsterisk,
   faChevronDown,
-  faEnvelope,
   faGlobe,
   faGraduationCap,
-  faHome,
   faLightbulb,
-  faPhone,
   faStar,
   faTrophy,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { LinksFunction } from "@remix-run/node";
 import styles from "~/app.css";
+import { Contact } from "~/components/contact";
+import { LanguageButton } from "~/components/language-button";
+import englishFlag from "~/english.png";
 
 export const links: LinksFunction = () => {
   return [
@@ -29,36 +29,19 @@ export const links: LinksFunction = () => {
 export default function Index() {
   return (
     <>
-      <div className="language english" id="language">
-        <a href="en">
-          <span></span>
-        </a>
-      </div>
-      <div className="contact">
-        <div className="middle">
-          <h1>Jonas Dahl</h1>
-          <p>
-            Civilingenjör i Datateknik. Mjukvaruutvecklare på Challengermode.
-          </p>
-          <ul>
-            <li>
-              <FontAwesomeIcon icon={faPhone} /> 070-796 48 83
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faEnvelope} /> <span>jonas</span>@
-              <span>jdahl.se</span>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faGithub} />
-              <a href="https://github.com/jonasdahl">jonasdahl</a>
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faGlobe} />{" "}
-              <a href="http://jdahl.se">jdahl.se</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <LanguageButton to="/en" label="In English" flag={englishFlag} />
+
+      <Center h="100vh" color="white">
+        <Contact
+          name="Jonas Dahl"
+          description="Civilingenjör i Datateknik. Mjukvaruutvecklare på Challengermode."
+          phone="+46 (0)70-796 48 83"
+          email="jonas@jdahl.se"
+          githubUsername="jonasdahl"
+          website={{ url: "https://jdahl.se", title: "jdahl.se" }}
+        />
+      </Center>
+
       <div className="down">
         <a
           href="#cv"
@@ -75,26 +58,7 @@ export default function Index() {
       </div>
       <div id="cv"></div>
       <div className="cv">
-        <h1>
-          Jonas <span className="print-only">Dahl</span>
-        </h1>
-        <ul className="info print-only">
-          <li>
-            <FontAwesomeIcon icon={faPhone} /> 070-796 48 83
-            <FontAwesomeIcon icon={faEnvelope} /> <span>jonas</span>@
-            <span>jdahl.se</span>
-          </li>
-          <li></li>
-          <li>
-            <FontAwesomeIcon icon={faHome} /> Solna
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faGlobe} />{" "}
-            <a href="http://jdahl.se">jdahl.se</a>
-            <FontAwesomeIcon icon={faGithub} />
-            <a href="https://github.com/jonasdahl">jonasdahl</a>
-          </li>
-        </ul>
+        <h1>Jonas Dahl</h1>
 
         <h2>
           <FontAwesomeIcon icon={faStar} /> Erfarenhet

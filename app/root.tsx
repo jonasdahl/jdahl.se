@@ -1,3 +1,4 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import fontAwesomeStyles from "@fortawesome/fontawesome-svg-core/styles.css";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
@@ -8,6 +9,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { theme } from "./theme";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -32,7 +34,9 @@ export default function App() {
         ></script>
       </head>
       <body>
-        <Outlet />
+        <ChakraProvider theme={theme}>
+          <Outlet />
+        </ChakraProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
