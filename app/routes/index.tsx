@@ -13,7 +13,10 @@ import { Resume } from "~/components/resume";
 import englishFlag from "~/english.png";
 
 export const links: LinksFunction = () => {
-  return [{ rel: "alternate", hrefLang: "sv-SE", href: "https://jdahl.se" }];
+  return [
+    { rel: "alternate", hrefLang: "sv-SE", href: "https://jdahl.se" },
+    { rel: "alternate", hrefLang: "en-US", href: "https://jdahl.se?lng=en" },
+  ];
 };
 
 // This tells remix to load the "home" namespace
