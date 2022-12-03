@@ -1,4 +1,6 @@
-import { Image, Tooltip } from "@chakra-ui/react";
+import { Tooltip } from "@chakra-ui/react";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LinkIconButton } from "../link-icon-button";
 
 export function LanguageButton({
@@ -20,8 +22,9 @@ export function LanguageButton({
         variant="ghost"
         colorScheme="transparent"
         position="fixed"
+        color="white"
       >
-        <Image src={flag} height="100%" style={{ aspectRatio: 1 }} />
+        <FontAwesomeIcon icon={faLanguage} />
       </LinkIconButton>
     </Tooltip>
   );

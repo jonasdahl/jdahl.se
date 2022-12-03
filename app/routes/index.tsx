@@ -33,7 +33,7 @@ export default function Index() {
   return (
     <>
       <LanguageButton
-        to={!!locale?.startsWith("en") ? "/?lng=sv" : "?lng=en"}
+        to={!!locale?.startsWith("en") ? "/" : "/?lng=en"}
         label={t("change-language", { ns: "translation" })}
         flag={englishFlag}
       />
@@ -41,7 +41,7 @@ export default function Index() {
       <Center h="100vh" color="white">
         <Contact
           name="Jonas Dahl"
-          description="Civilingenjör i Datateknik. Mjukvaruutvecklare på Challengermode."
+          description={t("jonas-description", { ns: "resume" })}
           phone="+46 (0)70-796 48 83"
           email="jonas@jdahl.se"
           githubUsername="jonasdahl"
@@ -55,7 +55,7 @@ export default function Index() {
             color="white"
             fontSize="3xl"
             to="#cv"
-            onClick={(e) => {
+            onClick={(e: { preventDefault: () => void }) => {
               e.preventDefault();
               cvRef.current?.scrollIntoView({ behavior: "smooth" });
             }}
