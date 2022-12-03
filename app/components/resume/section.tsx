@@ -1,4 +1,4 @@
-import { Box, Heading, Spacer, Stack, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Heading, Stack, Wrap, WrapItem } from "@chakra-ui/react";
 import { DateTime } from "luxon";
 import { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
@@ -52,7 +52,7 @@ export function SectionItem({
             ) : null}
           </Stack>
         </WrapItem>
-        <Spacer />
+        <WrapItem flexGrow={1} />
         <WrapItem fontWeight="bold" fontSize="sm">
           {start.toFormat(dateFormat, { locale })} -{" "}
           {end ? end.toFormat(dateFormat, { locale }) : t("now")}

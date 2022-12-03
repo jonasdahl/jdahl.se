@@ -53,5 +53,7 @@
   "languages": "Språk",
   "languages-content": "Talar engelska och svenska flytande. Förstår spanska på en grundläggande nivå.",
   "resume": "CV",
-  "jonas-description": "Civilingenjör i Datateknik. Mjukvaruutvecklare på Challengermode."
+  "jonas-description": "Civilingenjör i Datateknik. Mjukvaruutvecklare på Challengermode.",
+  "show-resume": "Visa CV",
+  "now": "nu"
 }
