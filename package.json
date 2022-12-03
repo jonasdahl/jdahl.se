@@ -7,7 +7,8 @@
     "start": "remix-serve build",
     "typecheck": "tsc",
     "test": "vitest",
-    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint ."
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "prisma": "prisma"
   },
   "eslintIgnore": [
     "/node_modules",
