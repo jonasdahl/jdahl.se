@@ -183,7 +183,10 @@ export function Resume() {
                 description={
                   <Trans ns="resume" i18nKey="activities.periserve.description">
                     {"Tillhandahåller "}
-                    <ChakraLink href="https://tidla.se">
+                    <ChakraLink
+                      textDecoration="underline"
+                      href="https://tidla.se"
+                    >
                       {"Tidla bokningssystem för växande företag"}
                     </ChakraLink>
                     {"."}

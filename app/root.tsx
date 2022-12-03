@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import fontAwesomeStyles from "@fortawesome/fontawesome-svg-core/styles.css";
 import { json, LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
 import {
@@ -63,6 +63,7 @@ export default function App() {
       <body>
         <ChakraProvider theme={theme}>
           <Outlet />
+          <ColorModeScript />
         </ChakraProvider>
         <ScrollRestoration />
         <Scripts />

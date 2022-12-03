@@ -9,6 +9,7 @@ export const Link = forwardRef<
   return (
     <ChakraLink
       ref={ref}
+      textDecoration="underline"
       as={forwardRef<HTMLAnchorElement>((props, ref) => (
         <RemixLink {...props} to={to} ref={ref} />
       ))}
