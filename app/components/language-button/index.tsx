@@ -3,15 +3,7 @@ import { faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LinkIconButton } from "../link-icon-button";
 
-export function LanguageButton({
-  flag,
-  label,
-  to,
-}: {
-  flag: string;
-  label: string;
-  to: string;
-}) {
+export function LanguageButton({ label, to }: { label: string; to: string }) {
   return (
     <Tooltip label={label} placement="right">
       <LinkIconButton

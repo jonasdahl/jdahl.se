@@ -10,7 +10,6 @@ import { Contact } from "~/components/contact";
 import { LanguageButton } from "~/components/language-button";
 import { Link } from "~/components/link";
 import { Resume } from "~/components/resume";
-import englishFlag from "~/english.png";
 
 export const links: LinksFunction = () => {
   return [
@@ -35,7 +34,6 @@ export default function Index() {
       <LanguageButton
         to={!!locale?.startsWith("en") ? "/" : "/?lng=en"}
         label={t("change-language", { ns: "translation" })}
-        flag={englishFlag}
       />
 
       <Center h="100vh" color="white">
