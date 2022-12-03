@@ -37,7 +37,7 @@ export function Contact({
 }) {
   return (
     <Container maxW="22rem">
-      <VStack textAlign="center">
+      <VStack spacing={6} textAlign="center">
         <Heading>{name}</Heading>
         <Text w="100%">{description}</Text>
         <Wrap justify="center" align="center">
@@ -48,7 +48,7 @@ export function Contact({
             value={
               <Link
                 rel="nofollow noreferrer"
-                href={"https://github.com/" + githubUsername}
+                href={`https://github.com/${githubUsername}`}
               >
                 {githubUsername}
               </Link>
