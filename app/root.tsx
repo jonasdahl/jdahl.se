@@ -25,7 +25,6 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-        <script src="https://use.fontawesome.com/196102e831.js" />
         <script
           defer
           data-domain="jdahl.se"
