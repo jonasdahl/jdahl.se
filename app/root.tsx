@@ -14,6 +14,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { useChangeLanguage } from "remix-i18next";
 import i18next from "./i18next.server";
+import { i18nCookie } from "./sessions/i18n.server";
 import { theme } from "./theme";
 
 export const meta: MetaFunction = () => ({
@@ -33,8 +34,13 @@ export const links: LinksFunction = () => {
 };
 
 export let loader = async ({ request }: LoaderArgs) => {
-  let locale = await i18next.getLocale(request);
-  return json({ locale });
+  const locale = await i18next.getLocale(request);
+  return json(
+    { locale },
+    {
+      headers: { "Set-Cookie": await i18nCookie.serialize(locale) },
+    }
+  );
 };
 
 export let handle = {

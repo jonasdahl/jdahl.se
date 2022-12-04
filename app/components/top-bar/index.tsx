@@ -9,7 +9,13 @@ export function TopBar({ locale }: { locale: string }) {
   const { t } = useTranslation(["translation"]);
 
   return (
-    <HStack as="nav" p={14} spacing={8} alignItems="flex-end" lineHeight={1}>
+    <HStack
+      as="nav"
+      py={{ base: 2, sm: 4, md: 6, lg: 14 }}
+      px={{ base: 4, sm: 6, md: 8, lg: 16 }}
+      spacing={8}
+      alignItems="baseline"
+    >
       <Link
         to="/"
         fontWeight="bold"
@@ -20,13 +26,13 @@ export function TopBar({ locale }: { locale: string }) {
       >
         Jonas Dahl
       </Link>
-      <Box />
-      <MenuLink to="/about">Om</MenuLink>
-      <Spacer />
-      <HStack>
+      <Box display={{ base: "none", md: "block" }} />
+      <MenuLink to="/about">{t("about")}</MenuLink>
+      <Spacer display={{ base: "none", md: "flex" }} />
+      <HStack display={{ base: "none", md: "flex" }} alignItems="baseline">
         <DarkModeButton />
         <LanguageButton
-          to={locale?.startsWith("en") ? "/" : "/?lng=en"}
+          locale={locale}
           label={t("change-language", { ns: "translation" })}
         />
       </HStack>
