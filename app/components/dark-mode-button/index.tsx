@@ -8,7 +8,7 @@ export function DarkModeButton() {
   const { toggleColorMode } = useColorMode();
 
   return (
-    <Tooltip label={t("toggle-dark-mode")} placement="right">
+    <Tooltip label={t("toggle-dark-mode")}>
       <IconButton
         onClick={() => toggleColorMode()}
         aria-label={t("toggle-dark-mode")}

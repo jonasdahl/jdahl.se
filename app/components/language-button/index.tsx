@@ -5,7 +5,7 @@ import { LinkIconButton } from "../link-icon-button";
 
 export function LanguageButton({ label, to }: { label: string; to: string }) {
   return (
-    <Tooltip label={label} placement="right">
+    <Tooltip label={label}>
       <LinkIconButton
         to={to}
         aria-label={label}

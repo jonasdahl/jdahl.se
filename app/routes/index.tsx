@@ -67,7 +67,13 @@ export default function Index() {
             website={{ url: "https://jdahl.se", title: "jdahl.se" }}
           />
         </Center>
+
+        <BottomBar />
       </Flex>
     </Box>
   );
+}
+
+function BottomBar() {
+  return <Box p={16}></Box>;
 }
