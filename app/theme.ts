@@ -2,6 +2,10 @@ import { extendTheme } from "@chakra-ui/react";
 import clouds from "./clouds.avif";
 
 export const theme = extendTheme({
+  fonts: {
+    heading: `'Arvo', sans-serif`,
+    body: `'Roboto', sans-serif`,
+  },
   styles: {
     global: () => ({
       body: {

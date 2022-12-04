@@ -33,7 +33,7 @@ export function SectionItem({
   start: DateTime;
   end: DateTime | null;
 }) {
-  const dateFormat = "LLLL yyyy";
+  const dateFormat = "LLL yyyy";
   const locale = useLocale();
   const { t } = useTranslation("resume");
 
@@ -41,17 +41,17 @@ export function SectionItem({
     <Box>
       <Wrap>
         <WrapItem>
-          <Stack spacing={0}>
+          <Stack spacing={1}>
             <Heading as="h3" size="sm">
               {title}
             </Heading>
-            {location ? (
-              <Box fontSize="sm" fontWeight="semibold">
-                {location}
-              </Box>
-            ) : null}
           </Stack>
         </WrapItem>
+        {location ? (
+          <WrapItem fontSize="sm" fontWeight="light">
+            {location}
+          </WrapItem>
+        ) : null}
         <WrapItem flexGrow={1} />
         <WrapItem fontWeight="bold" fontSize="sm">
           {start.toFormat(dateFormat, { locale })} -{" "}

@@ -1,4 +1,4 @@
-import { Box, Center, Container } from "@chakra-ui/react";
+import { Box, Center, Container, HStack, Spacer } from "@chakra-ui/react";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { useLocale } from "remix-i18next";
 import { BouncingContainer } from "~/components/bouncing-container";
 import { Contact } from "~/components/contact";
+import { DarkModeButton } from "~/components/dark-mode-button";
 import { LanguageButton } from "~/components/language-button";
 import { Link } from "~/components/link";
 import { Resume } from "~/components/resume";
@@ -32,6 +33,10 @@ export const links: LinksFunction = () => {
   return [
     { rel: "alternate", hrefLang: "sv-SE", href: "https://jdahl.se" },
     { rel: "alternate", hrefLang: "en-US", href: "https://jdahl.se?lng=en" },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Arvo&family=Roboto",
+    },
   ];
 };
 
@@ -47,11 +52,17 @@ export default function Index() {
   const cvRef = useRef<HTMLDivElement>(null);
 
   return (
-    <>
-      <LanguageButton
-        to={locale?.startsWith("en") ? "/" : "/?lng=en"}
-        label={t("change-language", { ns: "translation" })}
-      />
+    <Box minH="100vh">
+      <HStack as="nav" color="white">
+        <LanguageButton
+          to={locale?.startsWith("en") ? "/" : "/?lng=en"}
+          label={t("change-language", { ns: "translation" })}
+        />
+        <Spacer />
+        <Link to="/">Jonas</Link>
+        <Spacer />
+        <DarkModeButton />
+      </HStack>
 
       <Center h="100vh" color="white">
         <Contact
@@ -93,6 +104,6 @@ export default function Index() {
       <Container maxW="container.md" ref={cvRef} pb={24}>
         <Resume />
       </Container>
-    </>
+    </Box>
   );
 }

@@ -13,8 +13,6 @@ export function LanguageButton({ label, to }: { label: string; to: string }) {
         p={3}
         variant="ghost"
         colorScheme="transparent"
-        position="fixed"
-        color="white"
       >
         <FontAwesomeIcon icon={faLanguage} />
       </LinkIconButton>
