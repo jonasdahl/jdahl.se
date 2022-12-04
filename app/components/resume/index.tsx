@@ -8,6 +8,7 @@ import {
   Tag,
   TagLabel,
   Text,
+  useColorModeValue,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
@@ -33,7 +34,7 @@ export function Resume() {
   const { t } = useTranslation(["resume"]);
 
   return (
-    <Card bg="white" p={8}>
+    <Card bg={useColorModeValue("white", undefined)} p={8}>
       <CardHeader>
         <Heading id="cv">Jonas Dahl</Heading>
       </CardHeader>

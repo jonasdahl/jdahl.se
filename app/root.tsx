@@ -23,7 +23,13 @@ export const meta: MetaFunction = () => ({
 });
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: fontAwesomeStyles }];
+  return [
+    { rel: "stylesheet", href: fontAwesomeStyles },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Arvo&family=Roboto",
+    },
+  ];
 };
 
 export let loader = async ({ request }: LoaderArgs) => {

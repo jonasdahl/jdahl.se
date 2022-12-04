@@ -1,5 +1,4 @@
 import { extendTheme } from "@chakra-ui/react";
-import clouds from "./clouds.avif";
 
 export const theme = extendTheme({
   fonts: {
@@ -7,14 +6,9 @@ export const theme = extendTheme({
     body: `'Roboto', sans-serif`,
   },
   styles: {
-    global: () => ({
+    global: ({ colorMode }: { colorMode: string }) => ({
       body: {
-        bg: `url(${clouds})`,
-        bgColor: "#000",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-        backgroundPosition: "bottom",
+        bgColor: colorMode === "dark" ? "gray.800" : "gray.50",
       },
     }),
   },

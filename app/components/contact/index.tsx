@@ -7,6 +7,7 @@ import {
   TagLabel,
   TagLeftIcon,
   Text,
+  useColorModeValue,
   VStack,
   Wrap,
   WrapItem,
@@ -69,7 +70,11 @@ export function Contact({
 function Item({ icon, value }: { icon: IconDefinition; value: ReactNode }) {
   return (
     <WrapItem>
-      <Tag variant="subtle">
+      <Tag
+        variant="subtle"
+        colorScheme={useColorModeValue("whiteAlpha", undefined)}
+        backdropFilter="blur(10px)"
+      >
         <TagLeftIcon>
           <FontAwesomeIcon icon={icon} />
         </TagLeftIcon>
