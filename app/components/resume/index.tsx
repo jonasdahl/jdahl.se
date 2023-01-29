@@ -208,6 +208,10 @@ export function Resume() {
                   label={t("tidla-bokningssystem")}
                 />
                 <ProjectItem
+                  href="https://soltidtabellen.se"
+                  label="Soltidtabellen"
+                />
+                <ProjectItem
                   href="https://packlistor.se"
                   label="Packlistor.se"
                 />
