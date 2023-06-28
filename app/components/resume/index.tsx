@@ -2,15 +2,15 @@ import {
   Card,
   CardBody,
   CardHeader,
-  Heading,
   Link as ChakraLink,
+  Heading,
   Stack,
   Tag,
   TagLabel,
   Text,
-  useColorModeValue,
   Wrap,
   WrapItem,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import {
   faAsterisk,
@@ -54,7 +54,11 @@ export function Resume() {
                   month: 9,
                   day: 13,
                 })}
-                end={null}
+                end={DateTime.fromObject({
+                  year: 2023,
+                  month: 7,
+                  day: 5,
+                })}
               />
               <SectionItem
                 description={t("experience.altacogni.description")}
