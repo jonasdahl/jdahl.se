@@ -265,6 +265,7 @@ export function Resume() {
 
 const tags = [
   "Remix",
+  "Next.js",
   "React",
   "Typescript",
   "Javascript",
