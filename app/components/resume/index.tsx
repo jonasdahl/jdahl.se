@@ -49,37 +49,21 @@ export function Resume() {
                 description={t("experience.challengermode.description")}
                 location="Challengermode AB"
                 title={t("softwareEngineer")}
-                start={DateTime.fromObject({
-                  year: 2022,
-                  month: 9,
-                  day: 13,
-                })}
-                end={DateTime.fromObject({
-                  year: 2023,
-                  month: 7,
-                  day: 5,
-                })}
+                start={DateTime.fromObject({ year: 2022, month: 9, day: 13 })}
+                end={DateTime.fromObject({ year: 2023, month: 7, day: 5 })}
               />
               <SectionItem
                 description={t("experience.altacogni.description")}
                 location="Altacogni AB"
                 title={t("softwareEngineer")}
-                start={DateTime.fromObject({
-                  year: 2020,
-                  month: 8,
-                  day: 21,
-                })}
+                start={DateTime.fromObject({ year: 2020, month: 8, day: 21 })}
                 end={DateTime.fromObject({ year: 2020, month: 6, day: 10 })}
               />
               <SectionItem
                 description={t("experience.yanzi.description")}
                 location="Yanzi Networks AB"
                 title={t("softwareEngineer")}
-                start={DateTime.fromObject({
-                  year: 2018,
-                  month: 8,
-                  day: 21,
-                })}
+                start={DateTime.fromObject({ year: 2018, month: 8, day: 21 })}
                 end={DateTime.fromObject({ year: 2020, month: 7, day: 10 })}
               />
             </SectionContent>
@@ -94,22 +78,14 @@ export function Resume() {
                 title={t("education.kth.title")}
                 description={t("education.kth.description")}
                 location={t("kth") ?? "KTH"}
-                start={DateTime.fromObject({
-                  year: 2013,
-                  month: 8,
-                  day: 24,
-                })}
+                start={DateTime.fromObject({ year: 2013, month: 8, day: 24 })}
                 end={DateTime.fromObject({ year: 2018, month: 6, day: 10 })}
               />
               <SectionItem
                 title={t("education.highscool.title")}
                 description={t("education.highscool.description")}
                 location="Hersby gymnasium"
-                start={DateTime.fromObject({
-                  year: 2010,
-                  month: 8,
-                  day: 24,
-                })}
+                start={DateTime.fromObject({ year: 2010, month: 8, day: 24 })}
                 end={DateTime.fromObject({ year: 2013, month: 6, day: 10 })}
               />
             </SectionContent>
@@ -124,16 +100,8 @@ export function Resume() {
                 title={t("activities.reception.title")}
                 location={t("konglig-datasektionen") ?? "Konglig Datasektionen"}
                 description={t("activities.reception.description")}
-                start={DateTime.fromObject({
-                  year: 2017,
-                  month: 1,
-                  day: 1,
-                })}
-                end={DateTime.fromObject({
-                  year: 2017,
-                  month: 12,
-                  day: 30,
-                })}
+                start={DateTime.fromObject({ year: 2017, month: 1, day: 1 })}
+                end={DateTime.fromObject({ year: 2017, month: 12, day: 30 })}
               />
               <SectionItem
                 title={t("activities.ior.title")}
@@ -150,40 +118,24 @@ export function Resume() {
                     {`för detaljerade projekt.`}
                   </Trans>
                 }
-                start={DateTime.fromObject({
-                  year: 2015,
-                  month: 8,
-                  day: 1,
-                })}
+                start={DateTime.fromObject({ year: 2015, month: 8, day: 1 })}
                 end={DateTime.fromObject({ year: 2019, month: 1, day: 30 })}
               />
               <SectionItem
                 title={t("activities.ta.title")}
                 location={t("kth") ?? "KTH"}
                 description={t("activities.ta.description")}
-                start={DateTime.fromObject({
-                  year: 2015,
-                  month: 8,
-                  day: 1,
-                })}
+                start={DateTime.fromObject({ year: 2015, month: 8, day: 1 })}
                 end={DateTime.fromObject({ year: 2016, month: 6, day: 30 })}
               />
               <SectionItem
                 title={t("activities.referee.title")}
-                start={DateTime.fromObject({
-                  year: 2007,
-                  month: 4,
-                  day: 1,
-                })}
+                start={DateTime.fromObject({ year: 2007, month: 4, day: 1 })}
                 end={null}
               />
               <SectionItem
                 title="Periserve AB"
-                start={DateTime.fromObject({
-                  year: 2022,
-                  month: 6,
-                  day: 1,
-                })}
+                start={DateTime.fromObject({ year: 2022, month: 6, day: 1 })}
                 end={null}
                 description={
                   <Trans ns="resume" i18nKey="activities.periserve.description">
