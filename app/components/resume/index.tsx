@@ -1,4 +1,5 @@
 import {
+  Box,
   Card,
   CardBody,
   CardHeader,
@@ -11,6 +12,7 @@ import {
   Wrap,
   WrapItem,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import {
   faAsterisk,
@@ -32,11 +34,22 @@ import {
 
 export function Resume() {
   const { t } = useTranslation(["resume"]);
+  const [isPrint] = useMediaQuery("print");
 
   return (
-    <Card bg={useColorModeValue("white", undefined)} p={8}>
+    <Card
+      bg={useColorModeValue("white", undefined)}
+      p={8}
+      px={isPrint ? 0 : undefined}
+      {...(isPrint ? { borderWidth: 0, boxShadow: "none" } : {})}
+    >
       <CardHeader>
-        <Heading id="cv">Jonas Dahl</Heading>
+        <Heading as="h1" id="cv">
+          Jonas Dahl
+        </Heading>
+        <Box as="h3" fontSize="sm">
+          {t("jonas-description")}
+        </Box>
       </CardHeader>
       <CardBody>
         <Stack spacing={10}>
@@ -153,36 +166,38 @@ export function Resume() {
             </SectionContent>
           </Section>
 
-          <Section>
-            <SectionHeading>
-              <FontAwesomeIcon icon={faAsterisk} /> {t("other")}
-            </SectionHeading>
-            <SectionContent>
-              <Wrap spacing={2}>
-                <ProjectItem
-                  href="https://tidla.se"
-                  label={t("tidla-bokningssystem")}
-                />
-                <ProjectItem
-                  href="https://soltidtabellen.se"
-                  label="Soltidtabellen"
-                />
-                <ProjectItem
-                  href="https://packlistor.se"
-                  label="Packlistor.se"
-                />
-                <ProjectItem href="https://trippler.se" label="Trippler" />
-                <ProjectItem
-                  href="https://github.com/jonasdahl/yanzi-to-homeassistant-mqtt"
-                  label="Yanzi <-> Home Assistant MQTT"
-                />
-                <ProjectItem
-                  href="https://fogis.addem.se/"
-                  label={t("fogisCalendarExport")}
-                />
-              </Wrap>
-            </SectionContent>
-          </Section>
+          <Box display={isPrint ? "none" : undefined}>
+            <Section>
+              <SectionHeading>
+                <FontAwesomeIcon icon={faAsterisk} /> {t("other")}
+              </SectionHeading>
+              <SectionContent>
+                <Wrap spacing={2}>
+                  <ProjectItem
+                    href="https://tidla.se"
+                    label={t("tidla-bokningssystem")}
+                  />
+                  <ProjectItem
+                    href="https://soltidtabellen.se"
+                    label="Soltidtabellen"
+                  />
+                  <ProjectItem
+                    href="https://packlistor.se"
+                    label="Packlistor.se"
+                  />
+                  <ProjectItem href="https://trippler.se" label="Trippler" />
+                  <ProjectItem
+                    href="https://github.com/jonasdahl/yanzi-to-homeassistant-mqtt"
+                    label="Yanzi <-> Home Assistant MQTT"
+                  />
+                  <ProjectItem
+                    href="https://fogis.addem.se/"
+                    label={t("fogisCalendarExport")}
+                  />
+                </Wrap>
+              </SectionContent>
+            </Section>
+          </Box>
 
           <Section>
             <SectionHeading>

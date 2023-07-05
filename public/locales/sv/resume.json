@@ -4,10 +4,10 @@
   "kth": "Kungliga tekniska högskolan",
   "experience": {
     "challengermode": {
-      "description": "Tävlingsplattform för gaming och e-sport. Huvudfokus frontend."
+      "description": "Byggde, utvecklade och underhöll tävlingsplattformen Challengermode för gaming och e-sport. Huvudfokus frontend med React för mobil och webb i mindre team."
     },
     "altacogni": {
-      "description": "Verktyg och produkter inom IoT. Fullstack med tyngdpunkt på webbfrontend med React. Node.js och Java på backend."
+      "description": "Verktyg och produkter inom IoT, där jag byggde installationshjälpmedel och analysverktyg för en heltäckande sensorinstallation för kartläggning av kontors nyttjandegrad. Fullstack med tyngdpunkt på webbfrontend med React och cloudlösningar. Node.js och Java på backend."
     },
     "yanzi": {
       "description": "Verktyg och produkter inom IoT. Fullstack med tyngdpunkt på webbfrontend med React. Node.js och Java på backend."
@@ -16,8 +16,8 @@
   "education": {
     "title": "Utbildning",
     "kth": {
-      "title": "Civilingenjörsutbildning i Datateknik (300 hp)",
-      "description": "Master i Datalogi med spåret Programvaruteknik och delspåret Programspråk. Kandidatexamensarbete samt kurslista lämnas gärna på begäran. Examen juni 2018."
+      "title": "Civilingenjörsutbildning i Datateknik",
+      "description": "300 högskolepoäng. Master i Datalogi med spåret Programvaruteknik och delspåret Programspråk. Kandidatexamensarbete samt kurslista lämnas gärna på begäran. Examen juni 2018."
     },
     "highscool": {
       "title": "Naturvetenskapsprogrammet",
@@ -31,7 +31,7 @@
     },
     "ior": {
       "title": "Informationsorganet",
-      "description": "Utvecklat diverse system för Datasektionen. Se <1>Github</1> för detaljerade projekt."
+      "description": "Utvecklat diverse system för Datasektionen på KTH. Se <1>Github</1> för detaljerade projekt."
     },
     "ta": {
       "title": "Laborationsassistent",
@@ -41,7 +41,7 @@
       "title": "Fotbollsdomare"
     },
     "periserve": {
-      "description": "Tillhandahåller <1>Tidla Bokningssystem för växande företag</1>."
+      "description": "Driver Periserve AB som tillhandahåller <1>Tidla Bokningssystem för växande företag</1>."
     }
   },
   "konglig-datasektionen": "Konglig Datasektionen på KTH",

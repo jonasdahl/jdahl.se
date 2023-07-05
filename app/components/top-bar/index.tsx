@@ -1,4 +1,4 @@
-import { Box, HStack, Spacer } from "@chakra-ui/react";
+import { Box, HStack, Spacer, useMediaQuery } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { DarkModeButton } from "~/components/dark-mode-button";
@@ -7,6 +7,7 @@ import { Link } from "~/components/link";
 
 export function TopBar({ locale }: { locale: string }) {
   const { t } = useTranslation(["translation"]);
+  const [isPrint] = useMediaQuery("print");
 
   return (
     <HStack
@@ -15,6 +16,7 @@ export function TopBar({ locale }: { locale: string }) {
       px={{ base: 4, sm: 6, md: 8, lg: 16 }}
       spacing={8}
       alignItems="baseline"
+      {...(isPrint ? { display: "none" } : {})}
     >
       <Link
         to="/"

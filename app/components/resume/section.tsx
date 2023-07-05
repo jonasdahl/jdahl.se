@@ -1,4 +1,12 @@
-import { Box, Heading, Stack, Wrap, WrapItem } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Heading,
+  Spacer,
+  Stack,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import type { DateTime } from "luxon";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
@@ -39,25 +47,32 @@ export function SectionItem({
 
   return (
     <Box>
-      <Wrap>
-        <WrapItem>
-          <Stack spacing={1}>
-            <Heading as="h3" size="sm">
-              {title}
-            </Heading>
-          </Stack>
-        </WrapItem>
-        {location ? (
-          <WrapItem fontSize="sm" fontWeight="light">
-            {location}
+      <HStack>
+        <Wrap spacingY={0}>
+          <WrapItem>
+            <Stack spacing={1}>
+              <Heading as="h3" size="sm">
+                {title}
+              </Heading>
+            </Stack>
           </WrapItem>
-        ) : null}
-        <WrapItem flexGrow={1} />
-        <WrapItem fontWeight="bold" fontSize="sm">
+          {location ? (
+            <WrapItem fontSize="sm" fontWeight="light">
+              {location}
+            </WrapItem>
+          ) : null}
+        </Wrap>
+        <Spacer />
+        <Box
+          whiteSpace="nowrap"
+          textAlign="right"
+          fontWeight="bold"
+          fontSize="sm"
+        >
           {start.toFormat(dateFormat, { locale })} -{" "}
           {end ? end.toFormat(dateFormat, { locale }) : t("now")}
-        </WrapItem>
-      </Wrap>
+        </Box>
+      </HStack>
       {description ? <Box>{description}</Box> : null}
     </Box>
   );
