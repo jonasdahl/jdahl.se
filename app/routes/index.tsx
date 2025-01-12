@@ -1,11 +1,13 @@
-import { Box, Center, Flex, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Flex,
+  Heading,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import type { LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { useTranslation } from "react-i18next";
-import { useLocale } from "remix-i18next";
 import clouds from "~/clouds.avif";
-import { Contact } from "~/components/contact";
-import { TopBar } from "~/components/top-bar";
 import i18next from "~/i18next.server";
 
 export async function loader({ request }: LoaderArgs) {
@@ -14,13 +16,7 @@ export async function loader({ request }: LoaderArgs) {
 }
 
 export const meta: MetaFunction<typeof loader> = ({ data: { locale } }) => {
-  return {
-    title: "Jonas Dahl",
-    description:
-      locale === "en"
-        ? "Jonas Dahl. M.Sc Computer Science. React developer and Software Engineer."
-        : "Jonas Dahl. Civilingenjör i Datateknik vid KTH. React-utvecklare och mjukvaruingenjör.",
-  };
+  return { title: "Jonas Dahl" };
 };
 
 export const links: LinksFunction = () => {
@@ -31,15 +27,9 @@ export const links: LinksFunction = () => {
 };
 
 // This tells remix to load the "home" namespace
-export let handle = {
-  i18n: "resume",
-};
+export let handle = { i18n: "resume" };
 
 export default function Index() {
-  const { t } = useTranslation(["translation", "resume"]);
-
-  const locale = useLocale();
-
   return (
     <Box
       bg={`url(${clouds})`}
@@ -55,25 +45,10 @@ export default function Index() {
         color="white"
         backdropFilter={useColorModeValue(undefined, "brightness(50%)")}
       >
-        <TopBar locale={locale} />
-
-        <Center flexGrow={1} pb={10}>
-          <Contact
-            name="Jonas Dahl"
-            description={t("jonas-description", { ns: "resume" })}
-            phone="+46 (0)70-796 48 83"
-            email="jonas@jdahl.se"
-            githubUsername="jonasdahl"
-            website={{ url: "https://jdahl.se", title: "jdahl.se" }}
-          />
+        <Center flexGrow={1}>
+          <Heading>👋</Heading>
         </Center>
-
-        <BottomBar />
       </Flex>
     </Box>
   );
-}
-
-function BottomBar() {
-  return <Box p={16}></Box>;
 }
