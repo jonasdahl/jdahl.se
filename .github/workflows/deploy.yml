@@ -50,6 +50,9 @@ jobs:
             - recursive: true
               args: [--frozen-lockfile, --strict-peer-dependencies]
 
+      - name: 🔎 Prepare
+        run: pnpm run prisma generate
+
       - name: 🔎 Type check
         run: pnpm run typecheck
 
